@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮Guess My Number Game🎮</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="top">
+        <button class="btn restart">Play again</button>
+        <p class="game-scope">(Between 1 to 30)</p>
+      </div>
+      <h1>guess my numer!</h1>
+      <div class="secret-num-container"><span class="secret-num">?</span></div>
+      <section class="win-prompt hidden">
+        <h4 class="prompt-heading">Congrats!!🥳👏</h4>
+        <p class="prompt-para">You have won the game.🏆</p>
+      </section>
+      <section class="loose-prompt hidden">
+        <h4 class="prompt-heading">Opps!!☹</h4>
+        <p class="prompt-para">You have lost the game.👎</p>
+      </section>
+    </header>
+    <main>
+      <section class="input-section">
+        <input type="number" max="30" min="1" name="guess" class="guess-num" />
+        <button class="btn check">Check</button>
+      </section>
+      <section class="result-section">
+        <p class="message">Start gussing...</p>
+        <p>💯Score: <span class="score">30</span></p>
+        <p>🥇Highscore: <span class="highscore">0</span></p>
+      </section>
+    </main>
+    <footer>
+      <p>All rights reserved © Muntashir Wahid.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

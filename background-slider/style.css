@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.hero-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 1.2s;
+  background: url('./img/maldives.jpg') no-repeat center center ;
+  background-size: cover;
+}
+
+.btn {
+  width: 130px;
+  padding: 12px 6px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #073149;
+  border: 2px solid #c8e8ee;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-300%);
+}
+
+.btn:hover {
+  background-color: rgba(202, 189, 172, 0.575);
+  transition: background-color .6s;
+}
+
+.slider-btn-container {
+  position: absolute;
+  bottom: 30px;
+}
+
+.slider-btn {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1.5px solid black;
+  transform: translateY(-30%);
+  transition: background-color 1.2s;
+}

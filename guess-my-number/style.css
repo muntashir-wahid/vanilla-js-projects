@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --black: #201f1f;
+  --white: #f5f5f5;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  height: 100%;
+}
+.btn {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  margin-bottom: 85px;
+}
+
+.game-scope {
+  color: var(--white);
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 6.5vw;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 0px 5px 6px rgb(118, 125, 131);
+  padding: 0 16px;
+  margin-bottom: 85px;
+}
+
+.secret-num-container {
+  width: 100%;
+  height: 4px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secret-num {
+  height: 65px;
+  width: 100px;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.win-prompt,
+.loose-prompt {
+  position: absolute;
+  width: 25%;
+  height: 30%;
+  padding: 0.5% 1%;
+  background-color: var(--black);
+  top: 0;
+  transform: translate(140%, 30%);
+  text-align: center;
+}
+
+.loose-prompt {
+  z-index: -1;
+}
+
+.prompt-heading {
+  margin-bottom: 2%;
+  font-size: 1.8vw;
+  font-weight: 600;
+}
+
+.prompt-para {
+  font-size: 1.2vw;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  /* background-color: red; */
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  /* flex: 0 0 auto; */
+}
+
+.result-section {
+  flex-basis: 25%;
+}
+
+.guess-num {
+  width: 140px;
+  height: 85px;
+  font-size: 40px;
+  padding: 8px 18px;
+  text-align: center;
+  border: 4px solid var(--white);
+}
+
+.guess-num:focus {
+  outline: 2px inset var(--white);
+}
+
+.message {
+  margin-bottom: 22px;
+}
+
+footer > p {
+  font-size: 1vw;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  main {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .win-prompt,
+  .loose-prompt {
+    height: 20%;
+    top: 0;
+    transform: translate(145%, 100%);
+  }
+  .prompt-heading {
+    margin-bottom: 3%;
+    font-size: 2vw;
+  }
+  .prompt-para {
+    font-size: 1.6vw;
+  }
+}

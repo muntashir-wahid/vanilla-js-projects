@@ -1,8 +1,12 @@
 "use strict";
 
-const body = document.querySelector("body");
-const btn = document.querySelector(".btn");
-const colorName = document.querySelector(".color-name");
+// HTML Elements
+
+const bodyEl = document.querySelector("body");
+const btnEl = document.querySelector(".btn");
+const colorNameEl = document.querySelector(".color-name");
+
+// Simple Colors
 
 const colors = [
   "brown",
@@ -17,12 +21,18 @@ const colors = [
   "#d977be",
 ];
 
+// Color Flipper
+
 const colorFlipper = function (color) {
-  body.style.backgroundColor = color;
-  colorName.textContent = color;
+  bodyEl.style.backgroundColor = color;
+  colorNameEl.textContent = color;
 };
 
-btn.addEventListener("click", function () {
-  const randomNumber = Math.trunc(Math.random() * colors.length);
-  colorFlipper(colors[randomNumber]);
+const randomNumGen = () => Math.trunc(Math.random() * colors.length);
+
+// Event Handler
+
+btnEl.addEventListener("click", function () {
+  const randomNum = randomNumGen();
+  colorFlipper(colors[randomNum]);
 });

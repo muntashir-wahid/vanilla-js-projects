@@ -1,24 +1,29 @@
 "use strict";
 
-const body = document.querySelector("body");
-const btn = document.querySelector(".btn");
-const colorName = document.querySelector(".color-name");
+//HTML Elements
+
+const bodyEl = document.querySelector("body");
+const btnEl = document.querySelector(".btn");
+const colorNameEl = document.querySelector(".color-name");
+
+// Color Flipper functionality
 
 const hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-let randomNumber = function () {
-  return Math.trunc(Math.random() * hexValues.length);
-};
+const randomNumGen = () => Math.trunc(Math.random() * hexValues.length);
 
 const colorFlipper = function (color) {
-  body.style.backgroundColor = color;
-  colorName.textContent = color;
+  bodyEl.style.backgroundColor = color;
+  colorNameEl.textContent = color;
 };
 
-btn.addEventListener("click", function () {
+// Event Handler
+
+btnEl.addEventListener("click", function () {
   let hexColor = "#";
   for (let i = 0; i < 6; i++) {
-    hexColor += hexValues[randomNumber()];
+    const randomNum = randomNumGen();
+    hexColor += hexValues[randomNum];
   }
   colorFlipper(hexColor);
 });

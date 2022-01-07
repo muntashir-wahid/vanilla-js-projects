@@ -1,21 +1,38 @@
 "use script";
 
-const body = document.querySelector(".gradient");
-const btn = document.querySelector(".btn");
-const colorName = document.querySelector(".color-name");
+// HTML Elements
+
+const bodyEl = document.querySelector(".gradient");
+const btnEl = document.querySelector(".btn");
+const colorNameEl = document.querySelector(".color-name");
+
+// Gradient color flipper functionality
 
 const hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-let randomNumber = () => Math.trunc(Math.random() * hexValues.length);
-let gradientDirection = () => Math.trunc(Math.random() * 180);
+const randomNumGen = () => Math.trunc(Math.random() * hexValues.length);
 
-btn.addEventListener("click", function () {
+const gradientDirectionGen = () => Math.trunc(Math.random() * 180);
+
+const colorFlipper = function (graDec, colorOne, colorTwo) {
+  bodyEl.style.background = `linear-gradient(${graDec}deg, ${colorOne}, ${colorTwo})`;
+  colorNameEl.textContent = `linear-gradient(${graDec}deg, ${colorOne}, ${colorTwo})`;
+};
+
+// Event handler
+
+btnEl.addEventListener("click", function () {
   let colorOne = "#";
   let colorTwo = "#";
+  const gradigentValue = gradientDirectionGen();
+
   for (let i = 0; i < 6; i++) {
-    colorOne += hexValues[randomNumber()];
-    colorTwo += hexValues[randomNumber()];
+    const randomNumOne = randomNumGen();
+    const randomNumTwo = randomNumGen();
+
+    colorOne += hexValues[randomNumOne];
+    colorTwo += hexValues[randomNumTwo];
   }
-  body.style.background = `linear-gradient(${gradientDirection()}deg, ${colorOne}, ${colorTwo})`;
-  colorName.textContent = `linear-gradient(${gradientDirection()}deg, ${colorOne}, ${colorTwo})`;
+
+  colorFlipper(gradigentValue, colorOne, colorTwo);
 });

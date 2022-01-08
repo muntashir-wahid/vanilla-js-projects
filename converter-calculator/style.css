@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(217, 225, 231);
+}
+
+header {
+  background-color: rgb(9, 26, 63);
+  color: rgb(192, 241, 241);
+  padding: 16px 8px;
+}
+
+h1 {
+  font-size: 4vw;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 2vw;
+}
+
+.section {
+  margin: 36px 16px;
+  background-color: rgb(235, 231, 226);
+  padding: 16px 12px;
+}
+
+.sec-heading {
+  color: rgb(59, 48, 49);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.highlighter {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: coral;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  border: 2px solid black;
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 8px;
+}
+
+.box {
+  border: 2px solid black;
+  width: 150px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.575);
+}
+
+.result {
+  height: 10%;
+  background-color: rgb(223, 213, 201);
+  text-align: center;
+  padding: 10px 4px;
+  color: coral;
+}
+
+.last {
+  margin-bottom: 6px;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the converter calculator</h1>
+      <h3 class="sub-heading">
+        This page will help you to convert some importent values that is
+        essential in our regular life.
+      </h3>
+    </header>
+    <main>
+
+      <!-- Temperature converter -->
+
+      <section class="section">
+        <h5 class="sec-heading">
+          Input any <span class="highlighter">celsius</span>,<span
+            class="highlighter"
+            >farenheit</span
+          >
+          or <span class="highlighter">kelvin</span> value and convert into
+          another two.
+        </h5>
+        <div class="container temp">
+          <input
+            type="number"
+            class="box celcius-value"
+            placeholder="Celcius value.."
+          />
+          <input
+            type="number"
+            class="box farenheit-value"
+            placeholder="Farenheit value.."
+          />
+          <input
+            type="number"
+            class="box kelvin-value"
+            placeholder="Kelvin value.."
+          />
+        </div>
+        <div class="btn-container">
+          <button class="btn convert-temp">Convert</button>
+          <input type="button" value="Convert again" class="btn relode-temp">
+        </div>
+        <p class="result show-temp"></p>
+      </section>
+
+      <!-- Currency converter -->
+
+      <section class="section">
+        <h5 class="sec-heading">
+          Input any  
+          <span class="highlighter">BDT</span>,
+          <span class="highlighter">doller</span>,<span class="highlighter"
+            >pound</span
+          >
+          or <span class="highlighter">INR</span> currency value and convert into another three.
+        </h5>
+        <div class="container currency">
+          <input type="number" class="box bdt" placeholder="BDT value.." />
+          <input type="number" class="box doller" placeholder="Doller value..">
+          <input type="number" class="box pound" placeholder="Pound value..">
+          <input type="number" class="box inr" placeholder="INR value..">
+        </div>
+        <div class="btn-container">
+          <button class="btn convert-currency">Convert</button>
+          <input type="button" value="Convert again" class="btn relode-currency">
+        </div>
+        <p class="result show-currency"></p>
+      </section>
+
+      <!-- Age calculator -->
+
+      <section class="section">
+        <h5 class="sec-heading">
+          This section will calculate your
+          <span class="highlighter given">age</span> into
+          <span class="highlighter">years</span>,<span class="highlighter"
+            >months</span
+          >
+          and <span class="highlighter">days</span>.
+        </h5>
+        <div class="container age">
+          <input
+            type="number"
+            class="box birth-year"
+            placeholder="Your Birthyear.."
+          />
+          <input
+            type="number"
+            class="box current-year"
+            placeholder="Current Year.."
+          />
+          <button class="btn calculate-age">=</button>
+          <div class="box years">Age in year(s)..</div>
+          <div class="box months">Age in months(s)..</div>
+          <div class="box days">Age in days(s)..</div>
+        </div>
+        <p class="result show-age"></p>
+      </section>
+
+      <!-- Length converter  -->
+
+      <section class="section">
+        <h5 class="sec-heading">
+          Input any 
+          <span class="highlighter">inch(s)</span>,
+          <span class="highlighter">foot(s)</span>,<span class="highlighter"
+            >meter(s)</span
+          >
+          or <span class="highlighter">centimeter(s)</span> length value and convert into another three.
+        </h5>
+        <div class="container length">
+          <input
+            type="number"
+            class="box inch"
+            placeholder="Enter inch value.."
+          />
+          <input type="number" class="box foot" placeholder="Value in ft(s)..">
+          <input type="number" class="box merer" placeholder="Value in meter(s)..">
+          <input type="number" class="box centimeter" placeholder="Value in cm(s)..">
+        </div>
+        <div class="btn-container">
+          <button class="btn calculate-length">Convert</button>
+          <input type="button" value="Convert again" class="btn relode-length">
+        </div>
+        <p class="result show-length"></p>
+      </section>
+
+      <!-- Mass converter -->
+
+      <section class="section">
+        <h5 class="sec-heading">
+          Input any 
+          <span class="highlighter">Kilogram(s)</span>,<span class="highlighter"
+            >gram(s)</span
+          >
+          or <span class="highlighter">pound(s)</span> value and convert into another two.
+        </h5>
+        <div class="container mass">
+          <input
+            type="number"
+            class="box kg"
+            placeholder="Enter KG(s) value.."
+          />
+          <input type="number" class="box gram" placeholder="Value in Gram(s)..">
+          <input type="number" class="box m-pound" placeholder="Value in Pound(s)..">
+        </div>
+        <div class="btn-container">
+          <button class="btn calculate-mass">Convert</button>
+          <input type="button" value="Convert again" class="btn relode-mass"/>
+        </div>
+        </div>
+        <p class="result show-mass"></p>
+      </section>
+
+      <!-- BMI calculator -->
+
+      <section class="section last">
+        <h5 class="sec-heading">
+          This section will calculate your
+          <span class="highlighter given">BMI</span> from your
+          <span class="highlighter">mass</span> and
+          <span class="highlighter">height</span>.
+        </h5>
+        <div class="container bmi-calc">
+          <input
+            type="number"
+            class="box mas"
+            placeholder="Enter your mass(kg).."
+          />
+          <input
+            type="number"
+            class="box height"
+            placeholder="Enter your height(m).."
+          />
+          <button class="btn calculate-bmi">=</button>
+          <div class="box bmi">Your BMI..</div>
+        </div>
+        <p class="result show-bmi"></p>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

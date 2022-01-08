@@ -1,85 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
   box-sizing: border-box;
+  border: none;
+  outline: none;
 }
 
 body {
-  font-family: sans-serif;
-  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
-  height: 100vh;
+  color: black;
+  font-size: 18px;
+  width: 100%;
+  height: 90vh;
+}
+
+.btn-container {
+  margin: 15px 10px 25px;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  z-index: 1;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 16px;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 8px 12px;
+  max-width: 120px;
+  max-height: 80px;
+  cursor: pointer;
+  background-color: #1792b1;
+  color: #101111;
+  border-radius: 8px;
+}
+
+.container {
   position: relative;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
+  height: 90vh;
 }
 
-.show-modal {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.75rem 3.5rem;
-  margin: 5rem 2rem;
-  border: none;
-  background-color: #fff;
-  color: #444;
-  border-radius: 10rem;
-  cursor: pointer;
-}
-
-.close-modal {
+.about {
+  width: 70%;
+  max-width: 900px;
+  max-height: 500px;
   position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
+  z-index: 10;
+  background: linear-gradient(0deg, #c5cccf, #4c79ab);
+  padding: 10px 18px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.heading {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #d1d1d1;
 }
 
-p {
-  font-size: 1.8rem;
+.about .btn {
+  display: block;
+  margin: 12px auto;
 }
 
-/* -------------------------- */
-/* CLASSES TO MAKE MODAL WORK */
+.about p {
+  margin-bottom: 5px;
+}
+
 .hidden {
   display: none;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-
-  background-color: white;
-  padding: 6rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-
 .overlay {
+  width: 100%;
+  height: 105vh;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(102deg, #a35494, #73abd9);
   z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    overflow-y: scroll;
+  }
 }

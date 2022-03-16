@@ -1,27 +1,27 @@
-'use strict';
+"use strict";
 
-// HTML Elements 
-const navLinkItems = document.querySelector('.nav-items__links');
-const toggleBtn = document.querySelector('.toggle-btn');
+// HTML Elements
+const navMenu = document.querySelector(".nav-item__links");
+const toggleBtn = document.querySelector(".nav-item__toggle-btn");
 
 // Responsive nav
-const responsiveNav = function() {
+const responsiveNav = function () {
+  // Functions
+  const toggleNav = function (e) {
+    // Prevent default
+    e.preventDefault();
 
-    // Functions 
-    const toggleNav = function() {
-        navLinkItems.classList.toggle('active');
-    };
+    navMenu.classList.toggle("active");
+  };
 
-    const removeActiveCls = function(e) {
-        if (e.target.classList.contains('nav-link')) {
-            navLinkItems.classList.remove('active')
-        };
-    };
+  const hideNavEachClickOnLink = function (e) {
+    const navLink = e.target.classList.contains("nav__link");
+    if (navLink) navMenu.classList.remove("active");
+  };
 
-    // Event listeners 
-    toggleBtn.addEventListener('click', toggleNav);    
-    navLinkItems.addEventListener('click', removeActiveCls);
+  // Event listeners
+  toggleBtn.addEventListener("click", toggleNav);
+  navMenu.addEventListener("click", hideNavEachClickOnLink);
 };
 
 responsiveNav();
-

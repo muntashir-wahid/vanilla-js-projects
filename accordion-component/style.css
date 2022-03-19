@@ -1,0 +1,84 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion-items {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.103);
+  padding: 24px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.number {
+  margin-right: 24px;
+  color: #ced4da;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  color: #087f5b;
+}
+
+.hidden-box {
+  margin: 32px 24px 0 56px;
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hidden-box ul {
+  color: #495057;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.open {
+  border-top: 4px solid #087f5b;
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .text,
+.open .number {
+  color: #087f5b;
+}
+
+.open .icon {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
